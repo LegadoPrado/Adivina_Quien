@@ -1,0 +1,145 @@
+:root {
+  --btn-danger: rgb(187, 0, 0);
+  --btn-danger-border: rgb(205, 0, 0);
+  --btn-danger-hover: rgb(169, 0, 0);
+  --btn-danger-active: rgb(137, 0, 0);
+  --btn-success: rgb(0, 169, 17);
+  --btn-success-border: rgb(0, 190, 19);
+  --btn-success-hover: rgb(0, 143, 14);
+  --btn-success-active: rgb(0, 135, 13);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.body {
+  height: 95%;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.tablero-container {
+  height: 80%;
+  border: 0.3rem solid rgb(194, 194, 194);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  
+  gap: 0.4rem;
+  padding: 0.2rem;
+}
+
+.tablero-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.2rem;
+  border: 0.1rem solid rgb(172, 172, 172);
+}
+
+div[class="tablero-item disabled"]::after {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "\274c"; /* use the hex value here... */
+  font-size: 6rem;
+  line-height: 100px;
+  background-color: rgba(0, 0, 0, 0.427);
+}
+
+.tablero-item img {
+  width: 100%;
+  height: 84%;
+  object-position: center center;
+  object-fit: contain;
+}
+
+.tablero-item span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.preguntas-container {
+  background-color: rgba(0, 0, 0, 0.642);
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.btn-container {
+  height: 10%;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.btn {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn.btn-danger {
+  background-color: var(--btn-danger);
+  color: white;
+  border-color: var(--btn-danger-border);
+}
+
+.btn.btn-danger:hover {
+  background-color: var(--btn-danger-hover);
+}
+
+.btn.btn-danger:active {
+  background-color: var(--btn-danger-active);
+}
+
+.btn.btn-success {
+  background-color: var(--btn-success);
+  color: white;
+  border-color: var(--btn-success-border);
+}
+
+.btn.btn-success:hover {
+  background-color: var(--btn-success-hover);
+}
+
+.btn.btn-success:active {
+  background-color: var(--btn-success-active);
+}
+
+.shadow {
+  -webkit-box-shadow: 10px 10px 38px -3px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 10px 10px 38px -3px rgba(0, 0, 0, 0.45);
+  box-shadow: 10px 10px 38px -3px rgba(0, 0, 0, 0.45);
+}
+
+.w-100 {
+  width: 100%;
+}
