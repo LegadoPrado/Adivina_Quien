@@ -113,7 +113,7 @@ var perros = [
     colorPelo_: "blanco",
     colorPelo: "simple",
     tamanio: "chico",
-    temperamento: "tranquilo",
+    temperamento: "energetico",
     tipoPelo: "corto",
     tipoOscico: "corto",
     tipoCola: "corta",
@@ -178,6 +178,7 @@ function getPreguntas() {
     }
   } else {
     alert(`Tu perro es ${perros[0].raza}`);
+    location.reload();
   }
 }
 
